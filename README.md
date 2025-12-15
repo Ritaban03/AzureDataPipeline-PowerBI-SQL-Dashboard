@@ -1,70 +1,171 @@
-# Azure Data Pipeline-Power BI-Dashboard
+Azure End-to-End Data Engineering & Analytics Pipeline (Azure + Power BI)
 
-End-to-end ETL pipeline design using Azure Data Factory, Azure Blob Storage, Azure SQL Database, and Power BI for data visualization.
+This project demonstrates an end-to-end Azure-based Data Engineering and Analytics pipeline, designed to simulate a real-world advisory and enterprise analytics use case.
 
-This is a full-scale Power BI project built from raw `.csv` files of the [Olist E-Commerce dataset](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce). The goal is to simulate a real-world data pipeline, perform transformations, build KPIs, and generate dashboards using best BI practices.
+The solution covers data ingestion, storage, transformation, modeling, and visualization, leveraging Microsoft Azure services and Power BI to deliver actionable business insights.
 
-------
+Note: This repository is forked from an open-source project and has been customized, extended, and documented by Ritaban Banerjee for learning and portfolio demonstration purposes.
 
-##  🔗  Project Overview
+🔍 Business Use Case (Advisory Context)
 
-- Data Source: 9 CSV files uploaded from Azure Blob Storage
-- ETL Pipeline: Data cleaned and modeled in Power BI Power Query
-- Data Modeling: Star schema built with calendar table, key relationships and DAX measures
-- Visualization: Multiple report pages covering KPIs, trends, customer behavior and reviews
+The objective of this project is to design a scalable analytics solution for an e-commerce business, enabling stakeholders to track orders, revenue, customer behavior, seller performance, and delivery efficiency.
 
-------
+The architecture and KPIs are aligned with how consulting and advisory teams deliver data-driven insights to business clients.
 
-## 📁 Folder Structure
+🏗️ Solution Architecture
 
-AzureDataPipeline-PowerBI-Dashboard/
-├── Data/ ← Raw CSV files
-├── Images/ ← Power BI dashboard screenshots
+Data Flow:
+
+Raw transactional data ingested from CSV files
+
+Stored in Azure Blob Storage
+
+Structured tables created in Azure SQL Database
+
+Data modeled using star schema
+
+KPIs and insights delivered through Power BI dashboards
+
+🔗 Project Overview
+
+Data Source: 9 CSV files (Olist E-Commerce Dataset)
+
+Storage Layer: Azure Blob Storage
+
+Database Layer: Azure SQL Database
+
+Transformation Layer: Power BI Power Query & SQL
+
+Data Modeling: Star Schema with Calendar Table
+
+Analytics & Visualization: Power BI (DAX, Reports, Dashboards)
+
+📁 Folder Structure
+AzureDataPipeline-PowerBI-SQL-Dashboard/
+│
+├── Data/                 # Raw CSV files
+├── Images/               # Power BI dashboard screenshots
 ├── Power BI/
-│ ├── Measures/ ← All the DAX measures
-│ └── Report/ ← Final .pbix file
-├── SQL/ ← SQL scripts to create schema tables in Azure SQL Database
-└── README.md ← You are here
+│   ├── Measures/         # DAX measures
+│   └── Report/           # Final Power BI (.pbix)
+├── SQL/                  # Azure SQL table creation scripts
+└── README.md
 
-------
+📊 Key KPIs & Metrics
+Orders & Fulfillment
 
-##  🧠  Key DAX Measures
+Total Orders
 
-- Orders: Total, YTD, MTD, Cancelled, Delivered, On-Time %
-- Revenue: Total, per Order, YTD/MTD, Avg Installments
-- Customers: Unique, Returning, Revenue per Customer
-- Products: Avg Dimensions, Missing Fields, Category Analysis
-- Reviews: Avg Score, 5-Star %, Response Time
-- Sellers: Revenue per Seller, Orders per Seller
+Delivered vs Cancelled Orders
 
-> ⚙️  View all DAX logic under `/Power BI/Measures
+On-Time Delivery %
 
-------
+YTD / MTD Orders
 
-##  📊  Visual Insights
+Revenue
 
-Uploaded high-resolution screenshots of report pages for visual reference:
+Total Revenue
 
-• executive_dashboard.png – Showcases key e-commerce metrics including Total Orders, Revenue, Category Performance, and Geo insights.
+Average Revenue per Order
 
-• order_fulfillment_dashboard.png – Visualizes order status breakdown, average delivery times, and fulfillment efficiency across periods.
+Revenue Trends (MTD / YTD)
 
-These visuals will be embedded in the main README to help viewers quickly understand the scope and design of the Power BI dashboards built as part of the Azure Data Pipeline project.
+Installment Analysis
+
+Customers
+
+Unique Customers
+
+Returning Customers
+
+Revenue per Customer
+
+Products & Sellers
+
+Revenue per Seller
+
+Orders per Seller
+
+Product Category Performance
+
+Reviews & Satisfaction
+
+Average Review Score
+
+5-Star Review %
+
+Response Time Metrics
+
+🧠 Key DAX Measures
+
+All DAX logic is documented under:
+
+/Power BI/Measures
 
 
-------
+Measures include:
 
-##   🚀 Built With
+Time Intelligence (MTD, YTD)
 
-- Power BI (DAX, Power Query, Relationships)
-- Azure Blob Storage (CSV Data Source)
-- SQL (Azure SQL Database)
-- GitHub (Documentation & Versioning)
+Revenue Aggregations
 
-------
+Customer Segmentation
 
-## 👨‍💻 Author
+Delivery Performance Metrics
 
-**Ajay Danam**  
-[LinkedIn](https://www.linkedin.com/in/ajaydanam) | Data Analyst | BI Developer | Healthcare, Commercial, operational & Financial Analytics.
+📈 Visual Insights
+
+High-resolution dashboard screenshots are available under /Images, including:
+
+Executive Dashboard – Revenue, Orders, Category Performance, Geo Insights
+
+Order Fulfillment Dashboard – Delivery timelines, order status, fulfillment efficiency
+
+These dashboards are designed to mirror executive-level reporting used in consulting engagements.
+
+🚀 Technologies Used
+
+Microsoft Azure
+
+Azure Blob Storage
+
+Azure SQL Database
+
+Power BI
+
+Power Query
+
+DAX
+
+Data Modeling
+
+SQL
+
+Git & GitHub
+
+🔧 Customizations & Enhancements
+
+The following customizations have been made / are planned as part of this fork:
+
+Enhanced documentation for advisory-style explanation
+
+KPI alignment with business stakeholder reporting
+
+Dataset and transformation logic updates (in progress)
+
+Future integration with Azure Data Factory for automated ingestion
+
+👨‍💻 Maintainer
+
+Ritaban Banerjee
+Aspiring Azure Data Engineer | Data & Analytics | Advisory
+
+🔗 GitHub: https://github.com/Ritaban03
+
+🙏 Original Credit
+
+Original project created by Ajay Danam
+(Data Analyst | BI Developer)
+
+This fork is used strictly for educational and portfolio purposes, with full credit retained.
 
